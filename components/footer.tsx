@@ -1,5 +1,5 @@
-function Footer () {
-    return <div>Welcome to Next.js!</div>
-  }
-  
-  export default Footer
+function Navbar() {
+  return <div>Header</div>
+}
+
+export default Navbar

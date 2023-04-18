@@ -1,4 +1,9 @@
+import React from 'react'
 
-export default function layout(): JSX.Element {
-    return <div>Layout!</div>;
+type Props = {}
+
+export default function Layout({}: Props) {
+  return (
+    <div>layout</div>
+  )
 }
