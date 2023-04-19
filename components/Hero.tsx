@@ -3,32 +3,32 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BgCircles from './BgCircles'
 import Link from 'next/link'
 import Image from 'next/image'
-import img from '../public/profile.jpeg'
+
 type Props = {}
 
 export default function Hero({}: Props) {
   const [text, setText] = useTypewriter({
-    words: ["Hey there,  Rakesh here", "Who loves to code & explore different tech", "Don't wait here just go ahead see my stuff"],
+    words: ["Hey there, Rakesh here","Guy-who love's to code", "Check my stuff below"],
     loop: true,
     delaySpeed: 2000,
   })
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center'>
       <BgCircles />
-        <Image
-        src="/profile.jpeg"
+      <Image
+        src="/cover.jpg"
         alt="Rakesh Ravula"
-        width={500}
-        height={500}
+        width={400}
+        height={400}
+        className="relative rounded-full h-36 w-36 mx-auto mt-52 object-cover"
       />
-
-      <div className='z-20'>
-        <h2 className='text-sm uppercase text-gray-dark pb-2 tracking-[15px]'>Full Stack Engineer</h2>
-        <h1>
-          <span className='mr-3'>{text}</span>
-          <Cursor cursorColor="#F7ABOA"/>
+      <div>
+        <h2 className='text-sm uppercase text-gray pb-2 tracking-[15px]'>Full Stack Developer</h2>
+        <h1 className='text-2xl lg:text-4xl font-semibold px-10'>
+          <span className='mr-3 text-gray'>{text}</span>
+          <Cursor cursorColor="#F7AB0A"/>
         </h1>
-        <div className='pt-5'>
+        <div>
           <Link href="#about">
             <button className='heroButton'>About</button>
           </Link>

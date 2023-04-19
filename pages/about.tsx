@@ -1,3 +1,9 @@
-export default function About() {
-    return <div>About</div>
-  }
+import React from 'react'
+
+type Props = {}
+
+const about = (props: Props) => {
+  return (
+    <div>about</div>
+  )
+}

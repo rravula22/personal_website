@@ -40,7 +40,7 @@ export default function Header({ }: Props) {
                     fgColor='gray'
                     bgColor='transparent'
                 />
-                <p className="capitalize hidden md:inline-flex text-sm text-gray-400">
+                <p className="capitalize hidden md:inline-flex text-sm text-gray">
                     Get In Touch
                 </p>
             </motion.div>
