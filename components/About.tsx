@@ -25,8 +25,8 @@ export default function About({}: Props) {
           <span className='underline decoration-[#F7AB0A]/50'>little bit</span>{""} about me
         </h4>
         <p className="text-gray text-sm">I'm Rakesh Ravula, a software engineer with 4+ years of experience in developing full stack web applications and working with various technologies. I'm currently pursuing my Master's degree in Computer Science at UAB, expected to graduate in May 2023.
-          <p className=''>I'm passionate about building scalable and efficient web applications using the latest technologies. I'm also interested in blockchain technology and its applications in the real world.</p>
-          <p className=''>I'm currently looking for full-time opportunities in Software Engineering, Web Development, and Blockchain Development.</p>
+          I'm passionate about building scalable and efficient web applications using the latest technologies. I'm also interested in blockchain technology and its applications in the real world.
+          I'm currently looking for full-time opportunities in Software Engineering, Web Development, and Blockchain Development.
         </p>
       </div>
     </motion.div>
