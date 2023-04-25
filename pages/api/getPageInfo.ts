@@ -3,7 +3,7 @@ import { sanityClient } from '../../sanity'
 import { groq } from 'next-sanity'
 import { pageInfoBody } from '../../typings'
 
-const query = groq`*[_type == "pageInfo"][0]{
+const query = groq`*[_type == "pageInfo"]{
     ...,
 }`
 type Data = {
