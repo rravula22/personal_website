@@ -19,14 +19,13 @@ import { abort } from "process";
 
 
 type Props = {
-  pageInfo : pageInfoBody,
   skills: skillsBody[],
   experience: experienceBody[],
   socials: SocialBody[],
   projects: projectsBody[]
 }
 
-export default function Example({ pageInfo, skills, experience, socials, projects}: Props) {
+export default function Example({ skills, experience, socials, projects}: Props) {
   const color = typeof window !== 'undefined' ? 'red' : 'blue';
   const aboutId = "about";
   const experienceId = "experience";
@@ -64,7 +63,7 @@ export default function Example({ pageInfo, skills, experience, socials, project
             <div className="flex items-center justify-center">
               <img
                 className="w-10 h-10 mx-auto rounded-full filter grayscale hover:grayscale-0"
-                src={urlFor(pageInfo.image).url() || ''}
+                src={''}
                 />
             </div>
 
@@ -75,14 +74,12 @@ export default function Example({ pageInfo, skills, experience, socials, project
 }
 
 export async function getStaticProps(): Promise<{ props: Props, revalidate: number }> {
-  const pageInfo = await fetchPageInfo();
   const skills = await fetchSkills();
   const experience = await fetchExperience();
   const socials = await fetchSocials();
   const projects = await fetchProjects();
   return {
     props: {
-      pageInfo,
       skills,
       experience,
       socials,
