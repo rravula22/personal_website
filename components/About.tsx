@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-type Props = {}
+type Props = {
+}
 
 export default function About({}: Props) {
   return (

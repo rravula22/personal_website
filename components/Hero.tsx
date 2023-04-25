@@ -1,18 +1,25 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BgCircles from './BgCircles'
-import Link from 'next/link'
 import Image from 'next/image'
 import index from '../pages/index'
+import Link from 'next/link'
 
-type Props = {}
+type Props = {
+  about: string;
+  experience: string;
+  skills: string;
+  projects: string;
+  contact: string;
+}
 
-export default function Hero({}: Props) {
+export default function Hero({about, experience, skills, projects, contact}: Props) {
   const [text, setText] = useTypewriter({
     words: ["Hey there, Rakesh here","Guy-who love's to code", "Check my stuff below"],
     loop: true,
     delaySpeed: 2000,
   })
+
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center'>
       <BgCircles />
@@ -29,20 +36,20 @@ export default function Hero({}: Props) {
           <span className='mr-3 text-gray'>{text}</span>
           <Cursor cursorColor="#F7AB0A"/>
         </h1>
-        <div>
-          <Link href="#about">
+        {/* <div>
+          <Link href={`#${about}`}>
             <button className='heroButton'>About</button>
           </Link>
-          <Link href="#experience">
+          <Link href={`#${experience}`}>
             <button className='heroButton'>Experinece</button>
           </Link>
-          <Link href="#Skills">
+          <Link href={`#${skills}`}>
             <button className='heroButton'>Skills</button>
           </Link>
-          <Link href="#Projects">
+          <Link href={`#${projects}`}>
             <button className='heroButton'>Projects</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )
