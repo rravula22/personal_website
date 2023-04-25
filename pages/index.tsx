@@ -74,20 +74,20 @@ export default function Example({ pageInfo, skills, experience, socials, project
   )
 }
 
-// export async function getStaticProps(): Promise<{ props: Props, revalidate: number }> {
-//   const pageInfo = await fetchPageInfo();
-//   const skills = await fetchSkills();
-//   const experience = await fetchExperience();
-//   const socials = await fetchSocials();
-//   const projects = await fetchProjects();
-//   return {
-//     props: {
-//       pageInfo,
-//       skills,
-//       experience,
-//       socials,
-//       projects
-//     },
-//     revalidate: 60
-//   }
-// }
+export async function getStaticProps(): Promise<{ props: Props, revalidate: number }> {
+  const pageInfo = await fetchPageInfo();
+  const skills = await fetchSkills();
+  const experience = await fetchExperience();
+  const socials = await fetchSocials();
+  const projects = await fetchProjects();
+  return {
+    props: {
+      pageInfo,
+      skills,
+      experience,
+      socials,
+      projects
+    },
+    revalidate: 60
+  }
+}
