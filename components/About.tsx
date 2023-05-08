@@ -24,7 +24,7 @@ export default function About({}: Props) {
         <h4 className="text-4xl font-semibold text-gray">
           Here&apos;s a{" "}little bit{""} about me
         </h4>
-        <p className="text-gray text-sm">I&apos;m Rakesh Ravula, a software engineer with 4+ years of experience in developing full stack web applications and working with various technologies. I&apos;m currently pursuing my Master&apos;s degree in Computer Science at UAB, expected to graduate in May 2023.
+        <p className="text-gray text-sm">I&apos;m Rakesh Ravula, a software engineer with 4+ years of experience in developing full stack web applications and working with various technologies.A Recent graduate in Computer Science at UAB, expected to graduate in May 2023.
          I&apos;m passionate about building scalable and efficient web applications using the latest technologies. I&apos;m also interested in blockchain technology and its applications in the real world. I&apos;m currently looking for full-time opportunities in Software Engineering, Web Development, and Blockchain Development.</p>
       </div>
     </motion.div>
