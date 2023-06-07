@@ -30,7 +30,7 @@ const Projects = ({projects}: Props) => {
                         viewport={{once: true}}
                         src= {urlFor(project.image).url() || ''}
                         alt={project.title || ''}
-                        className='border border-gray object w-60 h-60 md:w-96 md:h-96'
+                        className='border border-gray object w-80 h-40 md:w-90 md:h-60'
                     />
                     <div>
                         <h4 className='text-4xl font-semibold text-gray text-center'>

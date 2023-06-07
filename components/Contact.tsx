@@ -21,10 +21,7 @@ function Contact({}: Props) {
   return (
     <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row
     max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray text-2xl'>
-            Contact
-        </h3>
-        
+        {/* <h3 className='absolute top-24 uppercase tracking-[20px] text-gray text-2xl'>Contact</h3>        */}
         <div className='flex flex-col space-y-10 mt-20'>
             <h4 className='text-4xl font-semibold text-gray text-center'>
                 I have got just what you&apos;re looking for<br/>
