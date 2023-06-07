@@ -15,13 +15,13 @@ const Projects = ({projects}: Props) => {
     transition={{duration:1.5}}
     whileInView={{opacity:1}}
     className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row
-    max-w-full justify-evenly mx-auto items-center z-0'>
+    max-w-full justify-evenly mx-auto items-center'>
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray text-2xl'>Projects</h3>
-        <div className='relative w-full flex space-x-5 overflow-x-scroll  overflow-y-hidden p-10 snap-x snap-mandatory z-20
+        <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
         scrollbar-thin scrollbar-track-gray/20 scrollbar-thumb-[#F7AB0A]/80'>
             {projects.map((project) => (
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center
-                justify-center p-20 md:p-44 h-screen'
+                justify-center p-10'
                 key={project._id}>
                     <motion.img
                         initial={{opacity: 0, y: -300}}
