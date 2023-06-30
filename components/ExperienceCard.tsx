@@ -17,12 +17,9 @@ type ExperienceData = {
 const experienceData: ExperienceData = {
     "uab": {
         name: 'UAB SHP',
-        role: 'Full Stack Developer',
-        date: 'May 2022 - May 2023',
-        description: ["Developed and launched a VUI node application with Alexa Skills Kit to help Diabetes patients track and log their food",
-            "Provided daily operational support for several applications by troubleshooting incidents to identify root causes and solutions",
-            "Developed a custom CMS for a health and nutrition project using PHP Laravel, Ajax, jQuery, GraphQL",
-            "Conducted hands-on tests of new technologies and tools and identified gaps in internal processes"
+        role: 'Software Engineer',
+        date: 'May 2022 - April 2023',
+        description: ["The project I worked on focused on research and development in the field of Health & Nutrition for sportspersons and individuals. This involved creating M health applications aimed at providing personalized health and nutrition recommendations. The project emphasized gathering data, conducting analysis, and designing algorithms to optimize nutrition intake for specific populations. My role encompassed research, development, and implementation of features, ensuring the applications effectively supported the health goals of the targeted user groups."
         ],
         color: '#5D9A2F'
     },
@@ -31,10 +28,7 @@ const experienceData: ExperienceData = {
         role: 'Backend Developer',
         date: 'April 2020 - Dec 2021',
         description: [
-            "Designed and implemented a NodeJS module that served as an AWS Lambda function for digital publication generation and publication from a proprietary authoring platform",
-            "Provided and implemented a solution for provisioning Cross Reference links for online books using graph algorithms",
-            "Reduced the effort for creating the final title by 35% and having a faster go-live date for course titles",
-            "Participated in an integrated DevOps Team utilizing Agile methodologies with strong change management focus"
+            "At Pearson, I played a pivotal role in converting XHTML (.epub) content to JSON using web scraping tools and algorithms. This process streamlined the extraction of data from .epub files, enabling efficient analysis and processing. Additionally, I utilized my expertise in React and Redux Saga to develop dynamic question rendering functionalities, enhancing the interactivity and engagement of the courseware. Collaborating with cross-functional teams, I designed and implemented RESTful APIs, ensuring seamless integration with external systems and optimizing data exchange capabilities. I also took charge of conducting thorough code reviews, identifying bugs, and providing valuable feedback to maintain high code quality and adhere to best practices. Alongside my development responsibilities, I actively participated in project management tasks, including sprint planning, task estimation, and progress tracking using JIRA and Agile methodologies. By engaging in daily stand-ups and sprint retrospectives, I fostered effective communication and contributed to continuous improvement within the team. Lastly, my proficiency in automated testing frameworks played a crucial role in enhancing testing efficiency and ensuring software quality."
         ],
         color: '#43E6E6'
     },
@@ -43,10 +37,7 @@ const experienceData: ExperienceData = {
         role: 'Full Stack Developer',
         date: 'May 2019 - March 2020',
         description: [
-            "Developed a web app for Digital Ads website in Astro using ReactJS, Redux, NodeJS, ExpressJS, MongoDB, and AWS",
-            "Increased client acquisition and retention by incorporating new layouts into the existing UX using Material UI",
-            "Developed a web app for Astro’s internal use using VueJs, Vuetify, NodeJS, ExpressJS, MySQL, and AWS",
-            "Addressed complex issues with real-time lead prioritization using WebSocket connectivity"
+            "As a full stack developer for the Astro client, I spearheaded the development of a robust web application using React and Node.js, resulting in a highly responsive and user-friendly interface that enhanced overall user experience. By implementing REST APIs, I facilitated efficient communication between the frontend and backend, enabling seamless data retrieval and manipulation for improved application performance. Leveraging my expertise in SQL databases, I optimized data management and retrieval by creating efficient procedures, leading to enhanced application efficiency and faster response times. Additionally, I designed and developed visually appealing dashboards in the frontend, providing users with intuitive visual representations for effective data analysis and decision-making. Working closely with the team, I diligently translated client requirements into functional features and enhancements, ensuring a seamless integration of application components. Thorough testing and debugging were conducted to ensure the reliability and stability of the application. Demonstrating strong problem-solving skills, I proactively identified and resolved issues, continuously improving application functionality and user experience. I also remained updated with the latest industry trends, actively researching and implementing best practices and emerging technologies to drive innovation and continuous improvement within the project."
         ],
         color: '#F61D9F'
     },
@@ -55,10 +46,7 @@ const experienceData: ExperienceData = {
         role: 'Intern Software Engineer',
         date: 'Aug 2018  - Dec 2018',
         description: [
-            "Involved in the development of a web application for a client to handle stock management using HTML, CSS, JavaScript, and PHP",
-            "Implemented a feature to display the network speed and download files from the server using AWS S3",
-            "Participated in the deployment of the application to AWS server using Docker",
-            "Worked on EC2 instances, S3 buckets, and RDS instances"
+            "As an Intern for CSA Soft, Involved in the development of a web application for a client to handle stock management using HTML, CSS, JavaScript, and PHP",
         ],
         color: '#D9F61D'
     },
