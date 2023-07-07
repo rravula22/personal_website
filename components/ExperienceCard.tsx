@@ -1,6 +1,5 @@
 import React from 'react'
 import { color, motion } from 'framer-motion'
-import { once } from 'events'
 type Props = {
     name: string | undefined
 }
@@ -19,8 +18,7 @@ const experienceData: ExperienceData = {
         name: 'UAB SHP',
         role: 'Software Engineer',
         date: 'May 2022 - April 2023',
-        description: ["The project I worked on focused on research and development in the field of Health & Nutrition for sportspersons and individuals. This involved creating M health applications aimed at providing personalized health and nutrition recommendations. The project emphasized gathering data, conducting analysis, and designing algorithms to optimize nutrition intake for specific populations. My role encompassed research, development, and implementation of features, ensuring the applications effectively supported the health goals of the targeted user groups."
-        ],
+        description: ["Worked with research and development team in the field of Health & Nutrition for sportspersons and individuals. Contributed in development of applications aimed at providing personalized health and nutrition recommendations. The project emphasized gathering data, conducting analysis, and designing algorithms to optimize nutrition intake for specific populations. My role encompassed research, development, and implementation of features, ensuring the applications effectively supported the health goals of the targeted user groups."],
         color: '#5D9A2F'
     },
     "pearson": {
@@ -28,7 +26,7 @@ const experienceData: ExperienceData = {
         role: 'Backend Developer',
         date: 'April 2020 - Dec 2021',
         description: [
-            "At Pearson, I played a pivotal role in converting XHTML (.epub) content to JSON using web scraping tools and algorithms. This process streamlined the extraction of data from .epub files, enabling efficient analysis and processing. Additionally, I utilized my expertise in React and Redux Saga to develop dynamic question rendering functionalities, enhancing the interactivity and engagement of the courseware. Collaborating with cross-functional teams, I designed and implemented RESTful APIs, ensuring seamless integration with external systems and optimizing data exchange capabilities. I also took charge of conducting thorough code reviews, identifying bugs, and providing valuable feedback to maintain high code quality and adhere to best practices. Alongside my development responsibilities, I actively participated in project management tasks, including sprint planning, task estimation, and progress tracking using JIRA and Agile methodologies. By engaging in daily stand-ups and sprint retrospectives, I fostered effective communication and contributed to continuous improvement within the team. Lastly, my proficiency in automated testing frameworks played a crucial role in enhancing testing efficiency and ensuring software quality."
+            "Played a pivotal role in converting XHTML (.epub) content to JSON using web scraping tools and algorithms. This process streamlined the extraction of data from .epub files, enabling efficient analysis and processing. Additionally, I utilized my expertise in React and Redux Saga to develop dynamic question rendering functionalities, enhancing the interactivity and engagement of the courseware. Collaborating with cross-functional teams, I designed and implemented RESTful APIs, ensuring seamless integration with external systems and optimizing data exchange capabilities. I also took charge of conducting thorough code reviews, identifying bugs, and providing valuable feedback to maintain high code quality and adhere to best practices. Alongside my development responsibilities, I actively participated in project management tasks, including sprint planning, task estimation, and progress tracking using JIRA and Agile methodologies. By engaging in daily stand-ups and sprint retrospectives, I fostered effective communication and contributed to continuous improvement within the team. Lastly, my proficiency in automated testing frameworks played a crucial role in enhancing testing efficiency and ensuring software quality."
         ],
         color: '#43E6E6'
     },
