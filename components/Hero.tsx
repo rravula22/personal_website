@@ -17,7 +17,7 @@ export default function Hero({about, experience, skills, projects, contact}: Pro
   const [text, setText] = useTypewriter({
     words: ["Hey there, Rakesh here","Guy-who love's to code", "Check my stuff below"],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 200,
   })
 
   return (

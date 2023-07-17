@@ -26,7 +26,6 @@ export default function Header({socials, contactId}: Props) {
                     />
                 ))}
             </motion.div>
-            <Link href="#contact"/>
             <motion.div
                 initial={{x: 500, opacity: 0, scale:0.5,}}
                 animate={{x:0, opacity:1, scale:1,}}
@@ -36,10 +35,11 @@ export default function Header({socials, contactId}: Props) {
                     className='curser-pointer'
                     network='email'
                     fgColor='gray'
+                    url='https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:64d8d739-8e59-36f4-92c0-66466fb7fcd6'
                     bgColor='transparent'
                 />
                 <p className="capitalize hidden md:inline-flex text-sm text-gray">
-                    Get In Touch
+                   Resume
                 </p>
             </motion.div>
         </header>

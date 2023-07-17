@@ -15,7 +15,7 @@ type Inputs = {
 function Contact({}: Props) {
     const { register, handleSubmit} = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = data => {
-        window.location.href = `mailto:rravula1998@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`;
+        window.location.href = `mailto:rravula1998@gmail.com?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`;
         console.log(data); 
     };
   return (
@@ -41,7 +41,7 @@ function Contact({}: Props) {
                     <p className='text-gray text-sm'>1416 13th St S AL 35205</p>
                 </div> 
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
+            {/* <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
                 <div className='flex space-x-2'>
                     <input {...register('name')} placeholder='name' type='text'  className='w-full h-10 px-5 rounded-md border-2 border-gray transition-opacity-0 focus:outline-none focus:border-[#F7AB0A]'/>
                     <input placeholder='email' type='text'  className='w-full h-10 px-5 rounded-md border-2 border-gray focus:outline-none focus:border-[#F7AB0A]'/>
@@ -49,7 +49,7 @@ function Contact({}: Props) {
                 <input {...register('subject')} placeholder='subject' type='text'  className='w-full h-10 px-5 rounded-md border-2 border-gray focus:outline-none focus:border-[#F7AB0A]'/>
                 <textarea {...register('message')} placeholder='Message' className='w-full h-40 px-5 rounded-md border-2 border-gray focus:outline-none focus:border-[#F7AB0A]'/>
                 <button className='w-full h-10 rounded-md bg-[#F7AB0A] text-white font-semibold'>Submit</button>
-            </form>
+            </form> */}
         </div>
     </div>
   )
