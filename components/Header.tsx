@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import React from 'react'
 import { SocialIcon } from 'react-social-icons';
 import { SocialBody } from '../typings';
 
@@ -35,11 +33,11 @@ export default function Header({socials, contactId}: Props) {
                     className='curser-pointer'
                     network='email'
                     fgColor='gray'
-                    url='https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:64d8d739-8e59-36f4-92c0-66466fb7fcd6'
+                    url={`mailto:${contactId}`}
                     bgColor='transparent'
                 />
                 <p className="capitalize hidden md:inline-flex text-sm text-gray">
-                   Resume
+                   email
                 </p>
             </motion.div>
         </header>
