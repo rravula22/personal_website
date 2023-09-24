@@ -29,7 +29,7 @@ export default function Hero({pageInfo}: Props) {
         height={400}
         className="relative rounded-full h-36 w-36 mx-auto mt-52 object-cover"
       />
-      <span className='text-gray text-lg'>Hi, I'm <b className='text-xl text-blue'>Rakesh</b></span>
+      <span className='text-gray text-lg'>Hi, I&apos;m <b className='text-xl text-blue'>Rakesh</b></span>
       <div>
         <p className='text-lg px-10'>
           <span className='mr-3 text-gray'>{text}</span>
