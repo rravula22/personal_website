@@ -1,9 +1,7 @@
-import React from 'react'
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import BgCircles from './BgCircles'
 import Image from 'next/image'
-import index from '../pages/index'
-import Link from 'next/link'
+import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { pageInfoBody } from '../typings'
+import BgCircles from './BgCircles'
 
 type Props = {
   about: string;
@@ -11,13 +9,14 @@ type Props = {
   skills: string;
   projects: string;
   contact: string;
+  pageInfo: pageInfoBody
 }
 
-export default function Hero({about, experience, skills, projects, contact}: Props) {
+export default function Hero({pageInfo}: Props) {
   const [text, setText] = useTypewriter({
-    words: ["Hey there, Rakesh here","Guy-who love's to code", "Check my stuff below"],
-    loop: true,
-    delaySpeed: 200,
+    words: pageInfo.backgroundInformation.split('#').reverse(),
+    loop: 1,
+    typeSpeed: 30,
   })
 
   return (
@@ -30,26 +29,12 @@ export default function Hero({about, experience, skills, projects, contact}: Pro
         height={400}
         className="relative rounded-full h-36 w-36 mx-auto mt-52 object-cover"
       />
+      <span className='text-gray text-lg'>Hi, I'm <b className='text-xl text-blue'>Rakesh</b></span>
       <div>
-        <h2 className='text-sm uppercase text-gray pb-2 tracking-[15px]'>Full Stack Developer</h2>
-        <h1 className='text-2xl lg:text-4xl font-semibold px-10'>
+        <p className='text-lg px-10'>
           <span className='mr-3 text-gray'>{text}</span>
           <Cursor cursorColor="#F7AB0A"/>
-        </h1>
-        {/* <div>
-          <Link href={`#${about}`}>
-            <button className='heroButton'>About</button>
-          </Link>
-          <Link href={`#${experience}`}>
-            <button className='heroButton'>Experinece</button>
-          </Link>
-          <Link href={`#${skills}`}>
-            <button className='heroButton'>Skills</button>
-          </Link>
-          <Link href={`#${projects}`}>
-            <button className='heroButton'>Projects</button>
-          </Link>
-        </div> */}
+        </p>
       </div>
     </div>
   )
