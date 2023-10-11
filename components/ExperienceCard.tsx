@@ -52,7 +52,7 @@ const experienceData: ExperienceData = {
   };
 
 const ExperienceCard = ({exp}: Props) => {
-    let {Company, jobTitle, companyImage, points, technologies, startDate, endDate } = exp;
+    let { Company, jobTitle, companyImage, points, technologies, startDate, endDate } = exp;
     // if (props.name && experienceData[props.name]) {
     //     name = experienceData[props.name].name;
     //     role = experienceData[props.name].role;
