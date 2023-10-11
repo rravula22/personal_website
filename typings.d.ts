@@ -39,7 +39,9 @@ interface experienceBody extends SanityBody {
     jobTitle: string;
     companyImage: Image;
     endDate: string;
+    points: string[];
     description: string;
+    technologies: skillsBody[];
 }
 
 interface skillsBody extends SanityBody {
@@ -59,4 +61,5 @@ interface projectsBody extends SanityBody {
 }
   
 
-export type { SanityBody, SocialBody, pageInfoBody, experienceBody, skillsBody, projectsBody, Image };
+export type { Image, SanityBody, SocialBody, experienceBody, pageInfoBody, projectsBody, skillsBody };
+

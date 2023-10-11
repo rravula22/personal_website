@@ -1,7 +1,8 @@
-import React from 'react'
-import { color, motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { urlFor } from '../sanity';
+import { experienceBody } from '../typings';
 type Props = {
-    name: string | undefined
+    exp: experienceBody
 }
 type ExperienceData = {
     [key: string]: {
@@ -50,17 +51,17 @@ const experienceData: ExperienceData = {
     },
   };
 
-const ExperienceCard = (props: Props) => {
-    let name, role, date, description, color;
-    if (props.name && experienceData[props.name]) {
-        name = experienceData[props.name].name;
-        role = experienceData[props.name].role;
-        date = experienceData[props.name].date;
-        description = experienceData[props.name].description;
-        color = experienceData[props.name].color;
-    } else {
-        return (<></>)
-    }
+const ExperienceCard = ({exp}: Props) => {
+    let {Company, jobTitle, companyImage, points, technologies, startDate, endDate } = exp;
+    // if (props.name && experienceData[props.name]) {
+    //     name = experienceData[props.name].name;
+    //     role = experienceData[props.name].role;
+    //     date = experienceData[props.name].date;
+    //     description = experienceData[props.name].description;
+    //     color = experienceData[props.name].color;
+    // } else {
+    //     return (<></>)
+    // }
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 
     w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100
@@ -71,16 +72,14 @@ const ExperienceCard = (props: Props) => {
             whileInView={{opacity: 1, y:0}}
             viewport={{once: true}}
             className='w-40 h-40 rounded-full xl:w-[200px] object-contain object-center' 
-            src={'./' + props.name + '.png'}
-            alt={name}
+            src={urlFor(companyImage).url() || ''}
+            alt={Company || ''}
         />
         <div className='px-0 md:px-10 text-left'>
-            <h4 className='text-4xl font-light text-gray-light'>{role}</h4>
-            <p className='uppercase py-5 text-gray-light'>{date}</p>
-            
+            <h4 className='text-4xl font-light text-gray-light'>{jobTitle}</h4>
+            <p className='uppercase py-5 text-gray-light'>{startDate}-{endDate}</p>
             <ul className='list-disc space-y-4 ml-5 text-lg'>
-                {description.map((desc, index) => (
-
+                {points.map((desc, index) => (
                     <motion.li
                         initial={{opacity: 0,  y: -100}}
                         transition={{duration:1.5}}
@@ -89,6 +88,11 @@ const ExperienceCard = (props: Props) => {
                         key={index} className='text-gray'>{desc}</motion.li>
                 ))}
             </ul>
+            {/* <p className='text-lg text-center md:text-left text-[#FABA0A]'>
+                Technologies Used: {technologies.map((tech) => (
+                    <span className='text-gray-light' key={tech._id}> {tech.title}, </span>
+                ))}
+            </p> */}
         </div>
     </article>
   )

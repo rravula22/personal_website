@@ -46,7 +46,7 @@ export default function Example({ pageInfo, skills, experience, socials, project
           <About/>
         </section> */}
         <section id={experienceId} className="snap-center">
-          <Experience/>
+          <Experience experience={experience}/>
         </section>
         <section id={skillId} className="snap-center">
           <Skills skills={skills}/>
