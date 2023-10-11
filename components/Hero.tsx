@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { urlFor } from '../sanity'
 import { pageInfoBody } from '../typings'
 import BgCircles from './BgCircles'
 
@@ -16,14 +16,14 @@ export default function Hero({pageInfo}: Props) {
   const [text, setText] = useTypewriter({
     words: pageInfo.backgroundInformation.split('#').reverse(),
     loop: 1,
-    typeSpeed: 30,
+    typeSpeed: 20,
   })
 
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center'>
       <BgCircles />
-      <Image
-        src="/cover.jpg"
+      <img
+        src={urlFor(pageInfo.image).url() || ''}
         alt="Rakesh Ravula"
         width={400}
         height={400}
