@@ -77,7 +77,7 @@ const ExperienceCard = ({exp}: Props) => {
         />
         <div className='px-0 md:px-10 text-left'>
             <h4 className='text-4xl font-light text-gray-light'>{jobTitle}</h4>
-            <p className='uppercase py-5 text-gray-light'>{startDate}-{endDate}</p>
+            <p className='uppercase py-5 text-gray-light'>{startDate}&nbsp{endDate}</p>
             <ul className='list-disc space-y-4 ml-5 text-lg'>
                 {points.map((desc, index) => (
                     <motion.li
