@@ -10,9 +10,3 @@ Before you begin, ensure you have met the following requirements:
 - A Sanity account for content management.
 - Git for version control (optional but recommended).
 
-## Getting Started
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/your-website.git
