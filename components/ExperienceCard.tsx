@@ -2,12 +2,23 @@ import { motion } from 'framer-motion';
 import { urlFor } from '../sanity';
 import { experienceBody } from '../typings';
 
+const formatDate = (dateStr: string): string => {
+    if (!dateStr || typeof dateStr !== 'string') return '';
+    const parts = dateStr.split('-');
+    if (parts.length < 2) return dateStr;
+    const year = Number(parts[0]);
+    const month = Number(parts[1]);
+    if (isNaN(year) || isNaN(month) || month < 1 || month > 12) return dateStr;
+    const date = new Date(year, month - 1, 1);
+    return date.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+};
+
 type Props = {
     exp: experienceBody
 }
 
 const ExperienceCard = ({ exp }: Props) => {
-    const { Company, jobTitle, companyImage, points, technologies, startDate, endDate } = exp;
+    const { Company, jobTitle, companyImage, points, technologies, startDate, endDate, isCurrentJob } = exp;
     return (
         <motion.article
             initial={{ opacity: 0, y: 30 }}
@@ -34,7 +45,7 @@ const ExperienceCard = ({ exp }: Props) => {
                     <h4 className='text-2xl font-semibold text-white'>{jobTitle}</h4>
                     <p className='text-indigo font-medium text-sm mt-1'>{Company}</p>
                     <p className='text-slate text-xs mt-1 font-mono'>
-                        {startDate} — {endDate || 'Present'}
+                        {formatDate(startDate)} — {isCurrentJob ? 'Present' : formatDate(endDate)}
                     </p>
                 </div>
 

@@ -39,6 +39,7 @@ interface experienceBody extends SanityBody {
     jobTitle: string;
     companyImage: Image;
     endDate: string;
+    isCurrentJob: boolean;
     points: string[];
     description: string;
     technologies: skillsBody[];
