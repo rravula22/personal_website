@@ -78,7 +78,7 @@ export default function Home({ pageInfo, skills, experience, socials }: Props) {
 export async function getStaticProps(): Promise<{ props: Props, revalidate: number }> {
   const pageInfo = await fetchPageInfo();
   const skills = await fetchSkills();
-  const experience = (await fetchExperience()).reverse();
+  const experience = await fetchExperience();
   const socials = await fetchSocials();
   return {
     props: {

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 type Inputs = {
@@ -9,9 +10,26 @@ type Inputs = {
 };
 
 function Contact() {
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = (data) => {
-        window.location.href = `mailto:rravula1998@gmail.com?subject=${encodeURIComponent(data.subject)}&body=Hi, my name is ${encodeURIComponent(data.name)} (${encodeURIComponent(data.email)}).%0A%0A${encodeURIComponent(data.message)}`;
+    const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        setStatus('sending');
+        try {
+            const res = await fetch('/api/sendEmail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+            if (res.ok) {
+                setStatus('success');
+                reset();
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
     };
 
     const contactItems = [
@@ -38,7 +56,7 @@ function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
             ),
-            label: 'Birmingham, AL',
+            label: 'Plano, Texas',
         },
     ];
 
@@ -144,10 +162,17 @@ function Contact() {
                     />
                     <button
                         type="submit"
-                        className="btn-primary w-full justify-center"
+                        disabled={status === 'sending'}
+                        className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                        Send Message
+                        {status === 'sending' ? 'Sending…' : 'Send Message'}
                     </button>
+                    {status === 'success' && (
+                        <p className="text-green-400 text-sm text-center">Message sent successfully!</p>
+                    )}
+                    {status === 'error' && (
+                        <p className="text-red text-sm text-center">Failed to send message. Please try again.</p>
+                    )}
                 </motion.form>
             </div>
         </div>
