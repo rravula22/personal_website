@@ -2,9 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0d1117;
+    color: #e2e8f0;
+  }
+}
+
 @layer components {
-    .heroButton {
-        @apply px-6 py-2 border-[#242424] rounded-full uppercase 
-        text-sm tracking-widest text-gray transition-all hover:border-[#F7AB0A] hover:text-[#F7AB0A] hover:bg-[#242424];
-    }
+  .heroButton {
+    @apply px-6 py-2 border border-[#1e293b] rounded-full uppercase
+    text-sm tracking-widest text-slate transition-all duration-300
+    hover:border-gold hover:text-gold hover:shadow-glow-amber;
+  }
+
+  .section-title {
+    @apply uppercase tracking-[20px] text-slate text-2xl font-light;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl border border-navy-light p-6 transition-all duration-300
+    hover:border-indigo hover:shadow-glow;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo to-blue;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg bg-indigo text-white font-medium text-sm tracking-wide
+    transition-all duration-300 hover:bg-indigo-dark hover:shadow-glow;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-lg border border-indigo text-indigo font-medium text-sm tracking-wide
+    transition-all duration-300 hover:bg-indigo hover:text-white hover:shadow-glow;
+  }
 }
