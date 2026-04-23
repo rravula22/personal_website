@@ -24,8 +24,9 @@ export default function About({}: Props) {
         <h4 className="text-4xl font-semibold text-gray">
           Here&apos;s a{" "}little bit{""} about me
         </h4>
-        <p className="text-gray text-sm">I&apos;m Rakesh Ravula, a software engineer with 4+ years of experience in developing full stack web applications and working with various technologies.A Recent graduate in Computer Science at UAB.
-         I&apos;m passionate about building scalable and efficient web applications using the latest technologies. I&apos;m also interested in blockchain technology and its applications in the real world. I&apos;m currently looking for full-time opportunities in Software Engineering, Web Development, and Blockchain Development.</p>
+        <p className="text-gray text-sm">I&apos;m Rakesh Ravula, a Full Stack Developer with 5+ years of experience building scalable web applications and APIs for global enterprises including American Airlines and Walmart.</p>
+        <p className="text-gray text-sm">I specialize in React, Angular, Next.js, Node.js, TypeScript, Java, and GraphQL, delivering high-impact projects such as micro-frontend architectures, federated GraphQL APIs, and real-time alerts systems.</p>
+        <p className="text-gray text-sm">Experienced in cloud-native deployments on AWS and Azure, Kafka event-driven architectures, and Kubernetes-based infrastructure. Currently expanding into Generative AI with LangChain, LCEL, and Python-based LLM development, leveraging tools like GitHub Copilot and MCP servers daily.</p>
       </div>
     </motion.div>
   )
