@@ -1,10 +1,9 @@
-import { skillsBody } from "../typings";
-import url from 'url';
+import { groq } from 'next-sanity';
+import { sanityClient } from '../sanity';
+import { skillsBody } from '../typings';
 
-export const fetchSkills = async () => {
-    const path =  "https://" + process.env.NEXT_PUBLIC_BASE_URL + '/api/getSkills';
-    const myURL = url.parse(path);
-    const res = await fetch(myURL.href);
-    const { skills } = await res.json()
-    return skills as skillsBody[];
+const query = groq`*[_type == "skill"]{ ..., }`;
+
+export const fetchSkills = async (): Promise<skillsBody[]> => {
+    return sanityClient.fetch(query);
 }
