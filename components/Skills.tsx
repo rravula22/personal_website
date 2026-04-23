@@ -25,7 +25,7 @@ const Skills = ({ skills }: Props) => {
             Skills
           </span>
         </h2>
-        <p className="text-slate text-sm">Hover over a skill to see my proficiency</p>
+        <p className="text-slate text-sm">Hover over or focus a skill to see proficiency</p>
       </motion.div>
 
       <div className="flex flex-wrap justify-center gap-4 mt-10">

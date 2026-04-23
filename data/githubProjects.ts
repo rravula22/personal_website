@@ -111,7 +111,7 @@ export const githubProjects: GitHubProject[] = [
   },
   {
     id: 612835140,
-    name: "File_Traversal",
+    name: "file-traversal",
     description:
       "A versatile C program to navigate and analyze directories with custom search flags and file analysis capabilities.",
     html_url: "https://github.com/rravula22/File_Traversal",

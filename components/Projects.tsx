@@ -117,6 +117,11 @@ function ProjectCard({ project }: { project: GitHubProject }) {
       variants={cardVariants}
       className="group relative flex flex-col bg-surface border border-navy-light rounded-xl p-6
         hover:border-indigo transition-all duration-300 hover:shadow-glow cursor-pointer"
+      onClick={() => window.open(project.html_url, '_blank', 'noopener,noreferrer')}
+      role="link"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter') window.open(project.html_url, '_blank', 'noopener,noreferrer') }}
+      aria-label={`View ${project.name} on GitHub`}
     >
       {/* Top row: category badge + stars */}
       <div className="flex items-center justify-between mb-4">

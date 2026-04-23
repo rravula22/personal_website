@@ -38,7 +38,7 @@ function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
             ),
-            label: 'Birmingham, AL 35205',
+            label: 'Birmingham, AL',
         },
     ];
 
